@@ -8,13 +8,13 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 @RestController
-@RequestMapping("/api)")
+@RequestMapping("/employee")
 public class EmployeeController {
 
     @Autowired
     private EmployeeRepository employeeRepository;
 
-    @GetMapping("/employees")
+    @GetMapping("/show")
     public List<Employee> fetchEmployees(){
        return employeeRepository.findAll();
     }
